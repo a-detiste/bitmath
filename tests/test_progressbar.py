@@ -28,10 +28,14 @@
 Test the progressbar 'FileTransferSpeed' integration
 """
 
+try:
+    import unittest.mock
+except ImportError:
+    import mock
+
 from . import TestCase
 import bitmath
 from bitmath.integrations.bmprogressbar import BitmathFileTransferSpeed
-import mock
 import progressbar
 
 
